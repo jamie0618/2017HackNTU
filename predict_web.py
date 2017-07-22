@@ -24,7 +24,7 @@ def ReadImage(image_w, image_h, image_name):
     return data
 
 def ReadFile(image_name, image_w,image_h):
-	x_data = []
+    x_data = []
     data = ReadImage(image_w,image_h,image_name)
     data = np.reshape(data,(image_w,image_h,3))
     x_data.append(data)
