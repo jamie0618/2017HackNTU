@@ -18,7 +18,7 @@ image_w = 160
 image_h = 120
 
 def ReadImage(image_w, image_h, image_name):
-    im = Image.open(os.path.join(test_data_dir,image_name))
+    im = Image.open(image_name)
     im = im.resize((image_w, image_h), Image.BILINEAR )
     data = list(im.getdata())
     return data
