@@ -24,15 +24,9 @@ def ReadImage(image_w, image_h, image_name):
     return data
 
 def ReadFile(image_name, image_w,image_h):
-    x_data = []
-    y_data = []
-    files = [f for f in os.listdir(test_data_dir)]
-    for f in files:      
-        y_data.append(int(f.split('.')[0][-1]))
-        data = ReadImage(image_w,image_h,f)
-        data = np.reshape(data,(image_w,image_h,3))
-        x_data.append(data)
-    return np.asarray(x_data), np.asarray(y_data)
+    data = ReadImage(image_w,image_h,image_name)
+    data = np.reshape(data,(image_w,image_h,3))
+    return np.asarray(data)
 
 if __name__ == "__main__":
     
