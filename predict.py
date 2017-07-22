@@ -20,7 +20,7 @@ image_w = 160
 image_h = 120
 
 def ReadImage(image_name, image_w, image_h):
-    im = Image.open(os.path.join(test_data_dir,image_name))
+    im = Image.open(file_name)
     data = list(im.getdata())
     data = np.reshape(data,(image_w,image_h,3))
     return data
