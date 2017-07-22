@@ -1,6 +1,11 @@
 # 2017HackNTU
 2017 Hack NTU Project
 
-- model.h5 : CNN model
-- predict.py : input one image, output one value (1/0)
-- test_data : testing picture (size 160*120)
+Demo 網址 : http://weshare.jianlong.org/
+
+- train.py : 從頭訓練的的cnn model
+- pretrain.py : 用現成model下去串接訓練，但效果沒有比較好
+- predict.py : 預測test data中資料，輸出準確率和預測結果
+- predict_web.py : 網頁版用的python檔，輸入一張照片(不用限制size)，輸出1/0 (1是合格，0是不合格)
+- model/cnn_model.h5 : 從頭訓練的cnn model
+
