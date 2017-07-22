@@ -19,16 +19,21 @@ test_data_dir = os.path.join(base_dir,'test_data')
 image_w = 160
 image_h = 120
 
-def ReadImage(image_name, image_w, image_h):
-    im = Image.open(file_name)
-    data = list(im.getdata())
+def ReadImage(image_name):
+    im = Image.open(os.path.join(test_data_dir,image_name))
+    return list(im.getdata())
+
+def ReadFile(image_name,image_w,image_h):
+    x_data = []    
+    data = ReadImage(image_name)
     data = np.reshape(data,(image_w,image_h,3))
-    return data
+    x_data.append(data)
+    return np.asarray(x_data)
 
 if __name__ == "__main__":
     
     obike_classifier = load_model(model_path)
-    x_data = ReadImage(file_name,image_w,image_h)
+    x_data = ReadFile(file_name,image_w,image_h)
     x_data = x_data/255
     ans = obike_classifier.predict_classes(x_data)
     print(ans)
