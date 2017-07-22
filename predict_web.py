@@ -12,7 +12,7 @@ from PIL import Image
 from keras.models import load_model
 
 image_name = sys.argv[1]
-model_path = 'model/cnn_model.h5'
+model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'model/cnn_model.h5')
 
 image_w = 160
 image_h = 120
