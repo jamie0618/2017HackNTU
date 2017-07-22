@@ -23,7 +23,7 @@ def ReadImage(image_w, image_h, image_name):
     data = list(im.getdata())
     return data
 
-def ReadFile(image_w,image_h):
+def ReadFile(image_name, image_w,image_h):
     x_data = []
     y_data = []
     files = [f for f in os.listdir(test_data_dir)]
