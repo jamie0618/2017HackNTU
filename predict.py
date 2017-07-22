@@ -36,4 +36,4 @@ if __name__ == "__main__":
     x_data = ReadFile(file_name,image_w,image_h)
     x_data = x_data/255
     ans = obike_classifier.predict_classes(x_data)
-    print(ans)
+    print("result :{0}".format(ans[0]))
