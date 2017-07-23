@@ -14,7 +14,7 @@ Demo 網址 : http://weshare.jianlong.org/
 啟動 web server:
 
 ```
-FLASK_APP=predict_flask.py flask run
+FLASK_APP=predict_web.py flask run
 ```
 
 用法:
