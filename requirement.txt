@@ -1,2 +1,4 @@
-PIL
+Pillow
 keras
+tensorflow
+h5py
