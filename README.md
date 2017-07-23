@@ -9,3 +9,16 @@ Demo 網址 : http://weshare.jianlong.org/
 - predict_web.py : 網頁版用的python檔，輸入一張照片(不用限制size)，輸出1/0 (1是合格，0是不合格)
 - model/cnn_model.h5 : 從頭訓練的cnn model
 
+## 網頁版 predicor:
+
+啟動 web server:
+
+```
+FLASK_APP=predict_flask.py flask run
+```
+
+用法:
+
+```
+curl http://127.0.0.1:5000?input=/path/to/image_file
+```

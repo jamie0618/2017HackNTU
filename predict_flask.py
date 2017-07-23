@@ -39,3 +39,12 @@ def run():
     x_data = x_data/255
     ans = obike_classifier.predict_classes(x_data)
     return "result :{0}\n".format(ans[0])
+
+
+if __name__ == "__main__":
+
+    obike_classifier = load_model(model_path)
+    x_data = ReadFile(image_name,image_w,image_h)
+    x_data = x_data/255
+    ans = obike_classifier.predict_classes(x_data)
+    print("result :{0}".format(ans[0]))

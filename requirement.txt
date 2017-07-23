@@ -2,3 +2,4 @@ Pillow
 keras
 tensorflow
 h5py
+Flask
